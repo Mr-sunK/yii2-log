@@ -1,0 +1,23 @@
+{
+    "name": "saviorlv/yii2-log",
+    "description": "yii2-log",
+    "keywords": [ "FileLog", "Yii2"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "saviorlv",
+            "email": "1042080686@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+     "require": {
+        "php": ">=5.4",
+        "yiisoft/yii2": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "saviorlv\\yii2log\\": "src/"
+        }
+    }
+}
