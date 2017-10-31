@@ -30,7 +30,7 @@ class FileTarget extends Target
 	 * [$logType description]
 	 * @var integer
 	 */
-	public $logType = 0;
+	public $logType = 1;
     /**
      * @var string log file path or [path alias](guide:concept-aliases). If not set, it will use the "@runtime/logs/app.log" file.
      * The directory containing the log files will be automatically created if not existing.
@@ -87,10 +87,10 @@ class FileTarget extends Target
     {
         parent::init();
         if ($this->logFile === null) {
-        	if($this->$logType){
+        	if($this->logType){
 				$this->logFile = Yii::$app->getRuntimePath() . '/logs/'.date("Y-m-d").'_app.log';
         	}else{
-        		$this->logFile = Yii::$app->getRuntimePath() . '/logs/'.date("Y/m/d").'.log';
+        		$this->logFile = Yii::$app->getRuntimePath() . '/logs/'.date("Y/m/d").'/app.log';
         	}
             
         } else {
